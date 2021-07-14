@@ -1,0 +1,7 @@
+port=53
+domain-needed
+bogus-priv
+no-hosts
+addn-hosts=/etc/hosts-dnsmasq
+dhcp-mac=set:client_is_a_pi,B8:27:EB:*:*:*
+dhcp-reply-delay=tag:client_is_a_pi,2
