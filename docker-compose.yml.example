@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+
+  dnsmasq:
+    image: andyshinn/dnsmasq
+    # network_mode: "host"
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    extra_hosts:
+      - "xxx.local:192.168.1.xx"
+      - "xxx.local:192.168.1.xx"
+      - "xxx.local:192.168.1.xx"
+    cap_add:
+      - NET_ADMIN
+    init: true
+    restart: always
+
