@@ -6,7 +6,7 @@ sudo apt-get install -y dnsmasq
 
 sudo cp /etc/dnsmasq.conf ./dnsmasq.conf.org
 sudo cp /etc/dnsmasq.conf.example /etc/dnsmasq.conf
-sudo cp ./hosts-dnsmasq /etc/
+sudo ln -s ${PWD}/hosts-dnsmasq /etc/hosts-dnsmasq
 
 sudo systemctl enable dnsmasq
 
